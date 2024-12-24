@@ -11,30 +11,37 @@
 
     <form id="cadastroForm">
         <input type="hidden" id="editIndex" name="editIndex" value="-1">
-        
+
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" required>
         <br>
-    
+
         <label for="celular">Número de Celular:</label>
         <input type="text" id="celular" name="celular" required placeholder="(XX) XXXXX-XXXX" maxlength="15">
         <br>
-    
+
         <label for="cpf">CPF:</label>
         <input type="text" id="cpf" name="cpf" required placeholder="XXX.XXX.XXX-XX" maxlength="14">
         <br>
-    
+
         <label for="mesPago">Mês Pago:</label>
         <input type="month" id="mesPago" name="mesPago" required>
         <br>
-    
+
         <label for="vencimento">Dia de Vencimento:</label>
         <input type="number" id="vencimento" name="vencimento" min="1" max="31" required>
         <br>
-    
+
+        <label for="predio">Prédio:</label>
+        <select id="predio" name="predio" required>
+            <option value="">Selecione</option>
+            <option value="Essencial">Essencial</option>
+            <option value="Catalunia">Catalunia</option>
+        </select>
+        <br>
+
         <button type="submit">Cadastrar</button>
     </form>
-    
 
     <h2>Moradores Cadastrados</h2>
     <table id="tabelaMoradores">
@@ -43,12 +50,13 @@
                 <th>Nome</th>
                 <th>Celular</th>
                 <th>CPF</th>
+                <th>Prédio</th>
                 <th>Mês Pago</th>
                 <th>Dia de Vencimento</th>
                 <th>Anotações</th>
                 <th>Ações</th>
             </tr>
-        </thead>        
+        </thead>
         <tbody>
             <!-- Moradores cadastrados aparecerão aqui -->
         </tbody>
